@@ -1,4 +1,4 @@
-let secretNumber = 2;
+let secretNumber = Math.floor(Math.random() * 51);
 
 let attempsRemaining = 3;   
 
@@ -8,7 +8,7 @@ let guess = prompt(`Welcome ${userName}! Please guess a number from 1 to 50. You
 
 switch (true) {
     case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
+        alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
         break;
     case (guess > secretNumber):
         --attempsRemaining;
@@ -22,7 +22,7 @@ switch (true) {
 
 switch (true) {
     case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
+        alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
         break;
     case (guess > secretNumber):
         --attempsRemaining;
@@ -36,14 +36,14 @@ switch (true) {
 
 switch (true) {
     case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
+        alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
         break;
     case (guess > secretNumber):
         --attempsRemaining;
-        alert(`Sorry ${userName}, that number is too high! You are out of guesses. Please refresh this page to play again.`);
+        alert(`Sorry ${userName}, that number is too high! The secret number was ${secretNumber}. You have ${attempsRemaining} guesses remaining. Please refresh this page to play again.`);
         break;
     case (guess < secretNumber):
         --attempsRemaining;
-        alert(`Sorry ${userName}, that number is too low! You are out of guesses. Please refresh this page to play again.`);
+        alert(`Sorry ${userName}, that number is too low! The secret number was ${secretNumber}. You have ${attempsRemaining} guesses remaining. Please refresh this page to play again.`);
         break;
 }
