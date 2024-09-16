@@ -1,49 +1,37 @@
-let secretNumber = 2;
+let secretNumber = Math.floor(Math.random() * 51);
 
 let attempsRemaining = 3;   
 
 let userName = prompt("Welcome! What is your name?");
 
-let guess = prompt(`Welcome ${userName}! Please guess a number from 1 to 50. You have three guesses remaining:`);
+let guess = prompt(`Welcome ${userName}! Please guess a number from 1 to 50. You have ${attempsRemaining} guesses remaining:`);
 
-switch (true) {
-    case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
-        break;
-    case (guess > secretNumber):
-        --attempsRemaining;
-        guess = prompt(`That number is too high! Please guess again. You have ${attempsRemaining} guesses remaining`);
-        break;
-    case (guess < secretNumber):
-        --attempsRemaining;
-        guess = prompt(`That number is too low! Please guess again. You have ${attempsRemaining} guesses remaining.`);
-        break;
-}
+if (guess == secretNumber) {
+    alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
+    } else if (guess > secretNumber) {
+    --attempsRemaining;
+    guess = prompt(`Sorry ${userName}, that number is too high! Please guess again. You have ${attempsRemaining} guesses remaining.`);
+    } else {
+    --attempsRemaining;
+    guess = prompt(`Sorry ${userName}, that number is too low! Please guess again. You have ${attempsRemaining} guesses remaining.`);
+    }
 
-switch (true) {
-    case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
-        break;
-    case (guess > secretNumber):
-        --attempsRemaining;
-        guess = prompt(`That number is too high! Please guess again. You have ${attempsRemaining} guesses remaining`);
-        break;
-    case (guess < secretNumber):
-        --attempsRemaining;
-        guess = prompt(`That number is too low! Please guess again. You have ${attempsRemaining} guesses remaining.`);
-        break;
-}
+if (guess == secretNumber) {
+    alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
+    } else if (guess > secretNumber) {
+    --attempsRemaining;
+    guess = prompt(`Sorry ${userName}, that number is too high! Please guess again. You have ${attempsRemaining} guesses remaining.`);
+    } else {
+    --attempsRemaining;
+    guess = prompt(`Sorry ${userName}, that number is too low! Please guess again. You have ${attempsRemaining} guesses remaining.`);
+    }
 
-switch (true) {
-    case (guess == secretNumber):
-        alert(`You guessed correctly! The secret number is ${secretNumber}!`);
-        break;
-    case (guess > secretNumber):
-        --attempsRemaining;
-        alert(`That number is too high! You are out of guesses. Please refresh this page to play again.`);
-        break;
-    case (guess < secretNumber):
-        --attempsRemaining;
-        alert(`That number is too low! You are out of guesses. Please refresh this page to play again.`);
-        break;
-}
+if (guess == secretNumber) {
+    alert(`You guessed correctly! The secret number is ${secretNumber}! Please refresh this page to play again.`);
+    } else if (guess > secretNumber) {
+    --attempsRemaining;
+    alert(`Sorry ${userName}, that number is too high! The secret number was ${secretNumber}. You have ${attempsRemaining} guesses remaining. Please refresh this page to play again.`);
+    } else {
+    --attempsRemaining;
+    alert(`Sorry ${userName}, that number is too low! The secret number was ${secretNumber}. You have ${attempsRemaining} guesses remaining. Please refresh this page to play again.`);
+    }
