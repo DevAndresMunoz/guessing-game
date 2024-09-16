@@ -74,4 +74,3 @@ if (isNaN(guess)) {
         alert(`Sorry ${userName}, that number is too low! The secret number was ${secretNumber}. You have ${attempsRemaining} guesses remaining. Please refresh this page to play again.`);
         }
 }
-
